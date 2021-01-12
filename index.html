@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bakery | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -13,27 +14,166 @@
 <body>
     <header id=#home>
         <div class="container">
-            <div class="hamburger-menu">
+            <div class="hamburger-menu" >
                 <i class="fas fa-bars toggle"></i>
                 <i class="fas fa-times toggle"></i>
             </div>
-            <nav>
-            <a href=""><img src="images/logo.png" alt=""></a>
-            <ul>
-                <li>
-                    <a href="#home">Home</a>
+            <nav class="d-flex align-items-center justify-content-center justify-content-lg-between" >
+            <a class="navbar-brand" href=""><img class="img-fluid" src="images/logo.png" alt=""></a>
+            <ul class="nav-list text-center p-0">
+                <li class="nav-item" >
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#about">about</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#menu">menu</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#chefs">our team</a>
                 </li>
             </ul>
             </nav>
-            <div class="hero-text">
-                <h1>welcome</h1>
-                <p>BAked goods like you have never tasted before</p>
-                <a href="#">explore</a>
-                <a href="#">find a store</a>
+            <div class="hero-text w-100 text-white px-2 px-sm-0">
+                <h1 class="display-4">welcome</h1>
+                <p class="lead md-4"> Baked goods like you have never tasted before</p>
+                <a class="btn px-5 mr-2" href="#">explore</a>
+                <a class="btn px-5 ml-2" href="#">find a store</a>
             </div>
         </div>
-
     </header>
+    <main>
+        <section class="about" id="about">
+            <div class="container">
+                <div class="row align-items-lg-center">
+                    <div class="col-12 col-md-6 text-center text-md-left "data-aos='fade-right'>
+                        <div class="section-heading mb-3">
+                            <h4>discover</h4>
+                            <h1 class="display-4" >Our Story</h1>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ducimus!</p>
+                        <a class="btn mt-4 mb-5 mb-md-0" href="#">Find out more</a>
+                    </div>
+                    <div class="col-12 col-md-6"data-aos='fade-left'>
+                        <img class="img-fluid"  src="images/about-img.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="menu" id="menu">
+            <div class="container">
+                <div class="row d-flex text-center text-white">
+                    <div class="col-sm-12 col-md-4 mb-4 mb-md-0 shop-info"data-aos='fade-up'>
+                        <i class="fa fa-clock mb-3"></i>
+                            <h1 class="mb-4" >Open Hours</h1>
+                            <p>Mon to Fri 8:00am-8:00pm</p>
+                            <p>sat to sun 8:00am-8:00pm</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4 mb-4 mb-md-0 shop-info"data-aos='fade-down'>
+                        <i class="fa fa-map-marked-alt mb-3"></i>
+                            <h1 class="mb-4" > our location </h1>
+                            <p>kampala</p>
+                            <p>plot 57, Nkuruma street</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4 mb-4 mb-md-0 shop-info"data-aos='fade-left'>
+                        <i class="fa fa-mobile-alt mb-3"></i>
+                            <h1 class="mb-4" >get in touch</h1>
+                            <p>+256 7777777</p>
+                            <p>johndoe@example.com</p>
+                    </div>
+                </div>
+                <hr class="mt-5">
+            </div>
+            <div class="container-fluid p-0 menu-container">
+                <div class="section-heading my-5 text-center ">
+                    <h4 class="text-white" >Our Tasty Food</h4>
+                    <h1 class="display-4" >The Menu</h1>
+                    <div class="row d-flex text-white justify-content-center align-items-center no-gutters menu-section">
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mb-3 menu-item">
+                            <img class="img-fluid" src="images/menu-item-1.jpg" alt="">
+                            <div class="point-right"></div>
+                            <h6>the cake</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consequuntur!</p>
+                            <a class="btn d-lg-block" href="#">$10</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mb-3   menu-item">
+                            <img class="img-fluid" src="images/menu-item-2.jpg" alt="">
+                            <div class="point-right"></div>
+                            <h6>the cake</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consequuntur!</p>
+                            <a class="btn d-lg-block" href="#">$12</a>
+                        </div>
+                        <div class=" col-xs-6 col-sm-6 col-md-4 col-lg-2 mb-3   menu-item">
+                            <img class="img-fluid" src="images/menu-item-3.jpg" alt="">
+                            <div class="point-right"></div>
+                            <h6>the cake</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consequuntur!</p>
+                            <a class="btn d-lg-block" href="#">$17</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mb-3  menu-item">
+                            <img class="img-fluid" src="images/menu-item-4.jpg" alt="">
+                            <div class="point-left"></div>
+                            <h6>the cake</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consequuntur!</p>
+                            <a class="btn d-lg-block" href="#">$15</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mb-3  menu-item">
+                            <img class="img-fluid"  src="images/menu-item-5.jpg" alt="">
+                            <div class="point-left"></div>
+                            <h6>the cake</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consequuntur!</p>
+                            <a class="btn d-lg-block" href="#">$8</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mb-3  menu-item">
+                            <img class="img-fluid" src="images/menu-item-6.jpg" alt="">
+                            <div class="point-left"></div>
+                            <h6>the cake</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consequuntur!</p>
+                            <a class="btn d-lg-block" href="#">$18</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="chef" id="chef">
+            <div class="container">
+                <div class="section-heading my-5 text-center ">
+                    <h4 class=" text-black" >meet</h4>
+                    <h1 class="display-4" >our chef</h1>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12 col-md-4 col-lg-4"data-aos='fade-down'>
+                        <img src="images/chef-1.png" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h1>sahar stormzy</h1>
+                            <h6>capcake specialist</h6>
+                            <p>sahar is an awesome pastry chef</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4"data-aos='fade-right'>
+                        <img src="images/chef-2.png" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h1>patricia trey</h1>
+                            <h6>capcake specialist</h6>
+                            <p>patricia is an awesome pastry chef</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4"data-aos='fade-left'>
+                        <img src="images/chef-3.png" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h1>richard bucket</h1>
+                            <h6>capcake specialist</h6>
+                            <p>richard is an awesome pastry chef</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="text-center py-3">
+            &copy bakery 2021
+        </footer>
+    </main>
 
 <script src="https://kit.fontawesome.com/ba33ab971e.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

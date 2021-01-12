@@ -1,2 +1,346 @@
 @import url('https://fonts.googleapis.com/css?family=Niconne&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Teko:300,400&display=swap');
+
+a{
+    color: #ffffff !important;
+}
+p{
+    margin:0;
+}
+section{
+    padding: 60px 0;
+}
+header{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(16, 29, 44,.95),rgba(16, 29, 44,.95)),url('images/header-bg.jpg'), center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+header> .container{
+    position: relative;
+    height: 100%;
+    padding: 0;
+}
+.navbar-brand{
+    position: absolute;
+    width:100% ;
+    max-width: 100px;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: opacity 650ms;
+}
+.navbar-brand:hover{
+    opacity: .8;
+}
+.hamburger-menu{
+    position: fixed;
+    top:10px;
+    right: 15px;
+    display: flex;
+    color: #ffffff;
+    background-color: #101d2c;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+}
+.hamburger-menu i{
+    font-size: 30px;
+    color: rgba(188, 153 ,99 ,.7);
+    margin: auto;
+}
+.hamburger-menu .fa-times{
+    display: none;
+}
+.hamburger-menu .fa-times.open{
+    display: block;
+}
+.hamburger-menu .fa-bars.open{
+    display: none;
+}
+.nav-list{
+    list-style: none;
+    position: fixed;
+    background-color: #101d2c;
+    width:100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: #ffffff;
+    top: 0;
+    z-index: 2;
+    visibility: hidden; 
+    transform: translateX(100%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.nav-list.active{
+    visibility: visible;
+    transform: translateX(0);
+}
+.hero-text{
+    position: absolute;
+    top: 45%;
+    transform: translateY(-45%);
+    justify-content: center;
+    text-align: center;
+    word-spacing: 2px;
+}
+.hero-text h1{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-family: 'Niconne', sans-serif;
+    color: #c69963;
+}
+.hero-text p{
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.btn{
+    width: 100px;
+    padding: 5px 0 !important;
+    border: 1px solid #c69963;
+    position: relative;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255, .3),transparent);
+    transition: all 650ms;
+}
+.btn:hover::before{
+    left: 100%;
+}
+/* end of header */
+/* about */
+.section-heading h4{
+    text-transform: uppercase;
+    color:#101d2c;
+    line-height: 0;
+    font-family: 'teko',sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.section-heading h1{
+    font-family: 'niconne', cursive;
+    color: #c69963;
+}
+.about .btn{
+    width: 150px;
+    color: #c69963 !important;
+    text-transform: capitalize;
+    transition: background-color 650ms;
+}
+.about .btn:hover{
+    color: #ffffff !important;
+    background-color: #c69963;
+}
+.menu{
+    background-color: #101d2c;
+}
+.fa-clock, .fa-map-marked-alt, .fa-mobile-alt{
+    transform: scale(3);
+    color: #c69963;
+}
+.menu>.container>.row{
+    text-transform: capitalize;
+}
+.shop-info>p{
+    font-family: 'niconne', cursive;
+}
+.shop-info>h1{
+    margin-top: 5px;
+    font-family: 'teko',cursive;
+}
+hr{
+    border-top:1px solid rgba(255,255,255,.05);
+}
+.point-left,
+.point-right{
+    position: relative;
+    background-color: #ffffff;
+    display: flex;
+}
+.point-left,
+.point-right{
+    content:'';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color:#ffffff;
+    top: -12.5px;
+    left: 50%;
+    transform:translateX(-50%) rotate(45deg);
+    z-index:1;
+}
+.menu-section{
+    background-color: #ffffff;
+}
+.menu-item{
+    display: flex;
+    flex-direction: column;
+}
+.menu-item>p{
+    position: relative;
+    color: #212592;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.menu-item>a{
+    margin: auto;
+    color: #ffffff !important;
+    background-color: #c69963;
+}
+.menu-item>h6{
+    font-family: 'teko', cursive;
+    font-size: 1.8rem;
+    color: #212592;
+    margin-top: 10px;
+}
+.card-body h1{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'teko', sans-serif;
+    font-weight: 300;
+}
+.card-body h6{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'nicone', cursive;
+    font-weight: 300;
+    color: #c69963;
+}
+.card-body p{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'teko', cursive;
+    font-weight: 300;
+}
+
+@media(max-width:576px){
+
+}
+@media(min-width: 576px){
+   .navbar-brand{
+      max-width: 150px; 
+   } 
+   .hamburger-menu{
+       top:35px;
+       right: 35px;
+   }
+}
+@media (min-width: 768px){
+  .btn{
+      width: 150px;
+  }
+  .menu-item:nth-child(2),.menu-item:nth-child(5){
+    flex-direction:column-reverse;
+}
+}
+@media (min-width: 992px){
+    header>.container{
+        padding: 0 15px;
+    }
+  .hamburger-menu{
+      display: none;
+  }
+  .navbar-brand{
+        position: initial;
+        transform:initial;
+  }
+  .nav-list{
+    position:initial;
+    width: initial;
+    height: initial;
+    background-color: initial;
+    flex-direction: row;
+    visibility: initial;
+    transition: initial;
+    margin: 0;
+    padding: 0;
+    overflow: initial;
+    transform: initial;
+    /* background-color: #101d2c;
+    height: 10vh;
+    top:0;
+    right: 100px;
+    color: black;
+    z-index: 2;
+    visibility: visible; 
+    display: block; */
+}
+  .nav-item{
+      margin: 0 30px;
+  }
+  .nav-item:last-child{
+      margin-right:0;
+  }
+  .nav-link{
+      position: relative;
+      padding: 0;
+  }
+  .nav-link::before{
+      content:'';
+      position: absolute;
+      left:0;
+      background-color: #c69963;
+      width: 100%;
+      height: 2px;
+      bottom: -3px;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 650ms;
+  }
+  .nav-link:hover::before{
+      transform: scaleX(1);
+    }
+    .shop-info>p{
+        font-family: 'niconne', cursive;
+        font-size: 1.8rem;
+    }
+    .shop-info>h1{
+        margin-top: 15px;
+        font-family: 'teko',cursive;
+    }
+    .menu-item:nth-child(even){
+        flex-direction:column-reverse;
+    }
+}
+
+@media(min-width:1200px){
+    .point-left::before,
+    .point-right::before{
+        display: none;
+        top: -50%;
+        left: initial;
+        transform: translate(0, -50%);
+        background-color: red;
+
+    }
+    .point-left::before{
+        left: -12.5px;
+    }
+    .point-right::before{
+        right: -12.5px;
+    }
+    .menu-item>p{
+        display: none;
+        position: relative;
+        color: #212592;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+
+
